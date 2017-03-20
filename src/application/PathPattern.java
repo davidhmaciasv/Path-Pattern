@@ -44,10 +44,7 @@ public class PathPattern extends Application{
 
 	private void crearImagen(int i, int j) {
 		Pane b = new Pane();
-		if(tab[i][j]=='a')
-			b = new Pane(new ImageView(new Image("blanco.jpg")));
-		else
-			b = new Pane(new ImageView(new Image(tab[i][j] + ".jpg")));
+		b = new Pane(new ImageView(new Image(tab[i][j] + ".jpg")));
 		b.setPrefSize(47, 47);
 		gp.add(b, j, i);
 	}
