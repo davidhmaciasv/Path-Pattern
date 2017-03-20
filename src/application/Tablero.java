@@ -2,18 +2,18 @@ package application;
 
 public class Tablero {
 	private static char[][] initialBoard() {
-		char[][] board = { "aaaaaaaaaa".toCharArray(),
-				"aaaaaaaaaa".toCharArray(),
-				"aaaaaaaaaa".toCharArray(),
-				"aaaaaaaaaa".toCharArray(),
-				"aaaaaaaaaa".toCharArray(),
-				"aaaaaaaaaa".toCharArray(),				
-				"aaaaaaaaaa".toCharArray(),
-				"aaaaaaaaaa".toCharArray(),
-				"aaaaaaaaaa".toCharArray(),
-				"aaaaaaaaaa".toCharArray(),
-				"11aaaaaaaa".toCharArray(),
-				"11aaaaaaaa".toCharArray()
+		char[][] board = { "aaaaaaaaaaaaaaaaaaaa".toCharArray(),
+				"aaaaaaaaaaaaaaaaaaaa".toCharArray(),
+				"aaaaaaaaaaaaaaaaaaaa".toCharArray(),
+				"aaaaaaaaaaaaaaaaaaaa".toCharArray(),
+				"aaaaaaaaaaaaaaaaaaaa".toCharArray(),
+				"aaaaaaaaaaaaaaaaaaaa".toCharArray(),	
+				"aaaaaaaaaaaaaaaaaaaa".toCharArray(),
+				"aaaaaaaaaaaaaaaaaaaa".toCharArray(),
+				"aaaaaaaaaaaaaaaaaaaa".toCharArray(),
+				"aaaaaaaaaaaaaaaaaaaa".toCharArray(),
+				"12aaaaaaaaaaaaaaaaaa".toCharArray(),
+				"34aaaaaaaaaaaaaaaaaa".toCharArray()
 				};
 		return board;
 	}
