@@ -17,14 +17,22 @@ public class PathPattern extends Application{
 		launch(args);
 	}
 	private GridPane gp=new GridPane();
-	
+	private Scene scene;
+	private Stage primaryStage;
+	PathPatternLogic logica;
+	public Stage getPrimaryStage(){
+		return primaryStage;
+	}
 	@Override
 	public void start(Stage primaryStage) throws Exception {
+		this.primaryStage=primaryStage;
 		Pane pane = new Pane();
-		Scene scene = new Scene(pane, -10+47*tab[0].length, -10+49*tab.length);
+		scene = new Scene(pane, 47*tab[0].length, 49*tab.length);
 		BorderPane bp=new BorderPane();
 		crearSeq();
-		PathPatternLogic logica=new PathPatternLogic(this);
+		logica=new PathPatternLogic(this);
+		Handler h=new Handler(this);
+		pane.setOnMouseClicked(h);
 		MenHandle  mh=new MenHandle(this);
 		MenuBar mb=MenuP.getMenu(scene, primaryStage, mh);
 		bp.setTop(mb);
@@ -35,6 +43,10 @@ public class PathPattern extends Application{
 		primaryStage.setResizable(false);
 		primaryStage.setScene(scene);
 		primaryStage.show();
+	}
+	
+	public void volver(Stage primaryStage){
+		primaryStage.setScene(scene);		
 	}
 	public char[][]tab=Tablero.getBoard();
 	public void crearSeq() {
@@ -60,4 +72,5 @@ public class PathPattern extends Application{
 		b.setPrefSize(47, 47);
 		gp.add(b, j, i);
 	}
+	
 }

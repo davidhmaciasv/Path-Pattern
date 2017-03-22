@@ -1,19 +1,18 @@
 package application;
 
 import java.io.BufferedReader;
+import java.io.File;
 import java.io.FileReader;
+import java.io.IOException;
 import java.util.LinkedList;
 import java.util.Queue;
-import java.util.Stack;
 import java.util.StringTokenizer;
 
 public class PilaPregunta {
 	Queue<Pregunta> preguntas= new LinkedList<Pregunta>();
-	FileReader archivoPreguntas=new FileReader("archivoPreguntas.txt");
 	int nPreguntas;
-
-	public PilaPregunta() throws Exception {		
-		BufferedReader in = new BufferedReader(this.archivoPreguntas);
+	public PilaPregunta() throws IOException {
+		BufferedReader in=new BufferedReader(new FileReader(new File("src/archivoPreguntas.txt").getAbsolutePath()));
 		this.nPreguntas = Integer.parseInt(in.readLine());
 		for (int i = 0; i < nPreguntas; i++) {
 			StringTokenizer tok = new StringTokenizer(in.readLine());
@@ -43,10 +42,6 @@ public class PilaPregunta {
 
 	public Queue<Pregunta> getPreguntas() {
 		return preguntas;
-	}
-
-	public FileReader getArchivoPreguntas() {
-		return archivoPreguntas;
 	}
 
 	public int getnPreguntas() {

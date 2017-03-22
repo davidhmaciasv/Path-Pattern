@@ -8,8 +8,22 @@ public class Jugador {
 	public Jugador(String nombre, PathPatternLogic p) {
 		this.nombre = nombre;
 		this.p = p.p;
-		i = this.p.tab.length - 1;
-		j = 0;
+		if(nombre.equals("1")){
+			i=this.p.tab.length - 2;
+			j=0;
+		}
+		if(nombre.equals("2")){
+			i=this.p.tab.length - 2;
+			j=1;
+		}
+		if(nombre.equals("3")){
+			i=this.p.tab.length - 1;
+			j=0;
+		}
+		if(nombre.equals("4")){
+			i=this.p.tab.length - 1;
+			j=1;
+		}
 	}
 
 	public void avanzar(int x) {
@@ -21,24 +35,30 @@ public class Jugador {
 				x--;
 			}
 			if(x>0){
-				ii-=2;
+				i-=2;
 				avanzar(x);
-				return;
 			}
+			cambiarEnMatriz(ii, jj);
+			return;
 		}else{
 			while(x>0&&jj-2>=0){
 				jj-=2;
 				x--;
 			}
 			if(x>0){
-				ii-=2;
+				i-=2;
 				avanzar(x);
-				return;
 			}
+			cambiarEnMatriz(ii, jj);
+			return;
 		}
-		cambiarEnMatriz(ii, jj);
+		
 	}
 	public void cambiarEnMatriz(int a,int b){
+		if(nombre.equals("1"))
+			for (int i = 0; i < p.tab.length; i++) {
+				System.out.println(p.tab[i]);
+			}
 		p.tab[a][b]=p.tab[i][j];
 		p.tab[i][j]='a';
 		p.crearImagen(a, b);
