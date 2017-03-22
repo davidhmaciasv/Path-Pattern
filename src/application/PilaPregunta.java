@@ -9,11 +9,10 @@ import java.util.StringTokenizer;
 
 public class PilaPregunta {
 	Queue<Pregunta> preguntas= new LinkedList<Pregunta>();
-	FileReader archivoPreguntas;
+	FileReader archivoPreguntas=new FileReader("archivoPreguntas.txt");
 	int nPreguntas;
 
-	public PilaPregunta(FileReader archivoPreguntas) throws Exception {
-		this.archivoPreguntas = archivoPreguntas;
+	public PilaPregunta() throws Exception {		
 		BufferedReader in = new BufferedReader(this.archivoPreguntas);
 		this.nPreguntas = Integer.parseInt(in.readLine());
 		for (int i = 0; i < nPreguntas; i++) {

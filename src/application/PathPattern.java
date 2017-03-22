@@ -24,6 +24,7 @@ public class PathPattern extends Application{
 		Scene scene = new Scene(pane, -10+47*tab[0].length, -10+49*tab.length);
 		BorderPane bp=new BorderPane();
 		crearSeq();
+		PathPatternLogic logica=new PathPatternLogic(this);
 		MenHandle  mh=new MenHandle(this);
 		MenuBar mb=MenuP.getMenu(scene, primaryStage, mh);
 		bp.setTop(mb);
@@ -53,7 +54,7 @@ public class PathPattern extends Application{
 			pane.getChildren().add(l);
 		}
 	}
-	private void crearImagen(int i, int j) {
+	public void crearImagen(int i, int j) {
 		Pane b = new Pane();
 		b = new Pane(new ImageView(new Image(tab[i][j] + ".jpg")));
 		b.setPrefSize(47, 47);
