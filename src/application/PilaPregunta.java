@@ -2,15 +2,17 @@ package application;
 
 import java.io.BufferedReader;
 import java.io.FileReader;
+import java.util.LinkedList;
+import java.util.Queue;
 import java.util.Stack;
 import java.util.StringTokenizer;
 
 public class PilaPregunta {
-	Stack<Pregunta> preguntas;
+	Queue<Pregunta> preguntas= new LinkedList<Pregunta>();
 	FileReader archivoPreguntas;
 	int nPreguntas;
 
-	public PilaPregunta(FileReader archivoPreguntas, int nPreguntas) throws Exception {
+	public PilaPregunta(FileReader archivoPreguntas) throws Exception {
 		this.archivoPreguntas = archivoPreguntas;
 		BufferedReader in = new BufferedReader(this.archivoPreguntas);
 		this.nPreguntas = Integer.parseInt(in.readLine());
@@ -27,20 +29,20 @@ public class PilaPregunta {
 			String respuesta2 = in.readLine();
 			String respuesta3 = in.readLine();
 			String respuesta4 = in.readLine();
-
+			
 			Pregunta nueva = new Pregunta(dificultad, pregunta, respuesta1, respuesta2, respuesta3, respuesta4,
 					correcta);
-			this.preguntas.push(nueva);
+			this.preguntas.offer(nueva);
 		}
 	}
 
 	public Pregunta getPregunta() {
-		Pregunta pregunta = this.preguntas.pop();
-		preguntas.set(nPreguntas - 1, pregunta);
+		Pregunta pregunta = this.preguntas.remove();
+		this.preguntas.offer(pregunta);
 		return pregunta;
 	}
 
-	public Stack<Pregunta> getPreguntas() {
+	public Queue<Pregunta> getPreguntas() {
 		return preguntas;
 	}
 
