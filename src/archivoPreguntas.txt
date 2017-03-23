@@ -1,4 +1,4 @@
-2
+11
 1 3 2
 cuanto es 1 + 1
 1
@@ -11,3 +11,66 @@ cuanto es 2 + 2
 2
 3
 4
+2 1 4
+¿cuál de las siguientes opciones es correcta acerca de los patrones
+de diseño?
+Los patrones de diseño son soluciones a problemas generales que los desarrolladores de software enfrentan en proyectos de software.
+Los patrones de diseño representan las buenas prácticas usadas por desarrolladores experimientados.
+Los patrones de diseño se obtienen por ensayo y error a partir de la experiencia de muchos desarrolladores durante un tiempo considerable.
+Todas las anteriores
+1 2 3
+¿la clase java.lang.Integer ejemplifica cuál patrón de diseño?
+Abstract Factory
+Composite
+Decorator
+Observer
+2 2 1
+¿cuál de los siguientes patrones se usa cuando necesitamos manejar
+un grupo de objetos como si se tratara de un solo objeto?
+Composite
+Facade
+Flyweight
+Decorator
+2 2 3
+¿cuál de los siguientes patrones se usa principalmente para reducir
+el número de objetos creados y para mejorar el desempeño?
+Composite
+Facade
+Flyweight
+Decorator
+2 2 3
+¿cuál de las siguientes afirmaciones es correcta acerca del patrón
+"Memento"?
+este patrón se usa para recorrer los elementos de una colección de objetos de una manera secuencial sin necesidad de conocer su representación interna
+este patrón se usa para reducir la complejidad en la comunicación entre múltiples objetos
+este patrón se usa para restaurar el estado de un objeto a un estado previo
+este patrón se usa cuando hay una relación uno-a-muchos entre objetos de manera que si un objeto es modificado entonces sus objetos dependientes deben ser notificados automáticamente
+2 1 1
+¿en cuál de los siguientes patrones el comportamiento de una clase
+cambia en función de su estado?
+State
+Null Object
+Strategy
+Template
+2 1 1
+¿cuál de las siguientes afirmaciones describe correctamente a los
+patrones creacionales?
+este tipo de patrones provee una manera de crear objetos ocultando la lógica de creación sin usar el operador new
+este tipo de patrones se relaciona con la composición de clases y objetos utilizando el concepto de herencia para construir nuevos objetos
+este tipo de patrones está relacionado con la comunicación entre objetos
+este tipo de patrones está relacionado con la capa de presentación
+2 2 3
+¿cuál de las siguientes afirmaciones describe correctamente al
+patrón "Adapter"?
+este patrón construye un objeto complejo a partir de objetos simples
+este patrón crea duplicados de un objeto teniendo en cuenta el desempeño
+este patrón sirve para poder comunicar dos interfaces incompatibles
+este patrón se usa cuando necesitamos disminuir el acoplamiento entre una clase abstracta y su implementación
+3 3 2
+¿cuál de los siguientes patrones oculta las complejidades del
+sistema y provee una interfaz al cliente para que pueda acceder
+al sistema?
+Composite
+Facade
+Flyweight
+Decorator
