@@ -20,17 +20,8 @@ public class MenuP {
 		MenuItem reinicio = new MenuItem("Reinicio");
 		reinicio.setAccelerator(new KeyCodeCombination(KeyCode.R,
 				KeyCombination.SHORTCUT_DOWN));
-		Menu otro = new Menu("_Otros");
-		otro.setMnemonicParsing(true);
-		MenuItem datos = new MenuItem("Creditos");
-		datos.setAccelerator(new KeyCodeCombination(KeyCode.V,
-				KeyCombination.SHORTCUT_DOWN));
-//		Pane p = Presentacion.pr(PrimaryStage, scene);
-//		Scene sceneDat = new Scene(p, 300, 300);
-//		datos.setOnAction(e -> PrimaryStage.setScene(sceneDat));
-		otro.getItems().add(datos);
 		archivo.getItems().addAll(reinicio);
-		menu.getMenus().addAll(archivo, otro);
+		menu.getMenus().addAll(archivo);
 		reinicio.setOnAction(h);
 		return menu;
 	}

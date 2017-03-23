@@ -16,7 +16,23 @@ public class MenHandle implements EventHandler<ActionEvent> {
 		MenuItem m = (MenuItem) arg0.getSource();
 		switch (m.getText()) {
 		case "Reinicio":
-			p.tab = Tablero.getBoard();
+			p.tab = new char[][]{ "aaaaaaaaaaaaaaaaaaaa".toCharArray(),
+					"aaaaaaaaaaaaaaaaaaaa".toCharArray(),
+					"aaaaaaaaaaaaaaaaaaaa".toCharArray(),
+					"aaaaaaaaaaaaaaaaaaaa".toCharArray(),
+					"aaaaaaaaaaaaaaaaaaaa".toCharArray(),
+					"aaaaaaaaaaaaaaaaaaaa".toCharArray(),	
+					"aaaaaaaaaaaaaaaaaaaa".toCharArray(),
+					"aaaaaaaaaaaaaaaaaaaa".toCharArray(),
+					"aaaaaaaaaaaaaaaaaaaa".toCharArray(),
+					"aaaaaaaaaaaaaaaaaaaa".toCharArray(),
+					"12aaaaaaaaaaaaaaaaaa".toCharArray(),
+					"34aaaaaaaaaaaaaaaaaa".toCharArray()
+					};
+			p.logica.uno=new Jugador("1", p.logica);
+			p.logica.dos=new Jugador("2", p.logica);
+			p.logica.tres=new Jugador("3", p.logica);
+			p.logica.cuatro=new Jugador("4", p.logica);
 			p.crearSeq();
 			break;
 		}
