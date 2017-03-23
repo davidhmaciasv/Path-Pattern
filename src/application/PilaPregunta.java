@@ -21,7 +21,7 @@ public class PilaPregunta {
 			int correcta = Integer.parseInt(tok.nextToken());
 			String pregunta = "";
 			for (int j = 0; j < nParrafos; j++) {
-				pregunta += in.readLine() + "/n";
+				pregunta += in.readLine() + "\n";
 			}
 			String respuesta1 = in.readLine();
 			String respuesta2 = in.readLine();
@@ -34,7 +34,7 @@ public class PilaPregunta {
 		}
 	}
 
-	public Pregunta getPregunta() {
+	public Pregunta getPregunta() {		
 		Pregunta pregunta = this.preguntas.remove();
 		this.preguntas.offer(pregunta);
 		return pregunta;

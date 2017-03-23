@@ -8,62 +8,64 @@ public class Jugador {
 	public Jugador(String nombre, PathPatternLogic p) {
 		this.nombre = nombre;
 		this.p = p.p;
-		if(nombre.equals("1")){
-			i=this.p.tab.length - 2;
-			j=0;
+		if (nombre.equals("1")) {
+			i = this.p.tab.length - 2;
+			j = 0;
 		}
-		if(nombre.equals("2")){
-			i=this.p.tab.length - 2;
-			j=1;
+		if (nombre.equals("2")) {
+			i = this.p.tab.length - 2;
+			j = 1;
 		}
-		if(nombre.equals("3")){
-			i=this.p.tab.length - 1;
-			j=0;
+		if (nombre.equals("3")) {
+			i = this.p.tab.length - 1;
+			j = 0;
 		}
-		if(nombre.equals("4")){
-			i=this.p.tab.length - 1;
-			j=1;
+		if (nombre.equals("4")) {
+			i = this.p.tab.length - 1;
+			j = 1;
 		}
 	}
 
 	public void avanzar(int x) {
-		int dir = i % 4;
 		int ii = i, jj = j;
-		if(dir>=2){
-			while(x>0&&jj+2<p.tab[0].length){
-				jj+=2;
+		if (i > 9 || i == 6 || i == 7 || i == 2 || i == 3) {
+			while (x > 0 && jj + 2 < p.tab[0].length) {
 				x--;
+				jj += 2;
 			}
-			if(x>0){
-				i-=2;
-				avanzar(x);
-			}
-			cambiarEnMatriz(ii, jj);
-			return;
-		}else{
-			while(x>0&&jj-2>=0){
-				jj-=2;
+			if (x > 0) {
 				x--;
+				ii -= 2;
+				cambiarEnMatriz(ii, jj);
+				if (x > 0)
+					this.avanzar(x);
+				return;
 			}
-			if(x>0){
-				i-=2;
-				avanzar(x);
+		} else {
+			while (x > 0 && jj - 2 >= 0) {
+				x--;
+				jj -= 2;
 			}
-			cambiarEnMatriz(ii, jj);
-			return;
+			if (x > 0) {
+				if (i != 0 && i != 1) {
+					x--;
+					ii -= 2;
+					cambiarEnMatriz(ii, jj);
+					if (x > 0)
+						this.avanzar(x);
+					return;
+				}
+			}
 		}
-		
+		cambiarEnMatriz(ii, jj);
 	}
-	public void cambiarEnMatriz(int a,int b){
-		if(nombre.equals("1"))
-			for (int i = 0; i < p.tab.length; i++) {
-				System.out.println(p.tab[i]);
-			}
-		p.tab[a][b]=p.tab[i][j];
-		p.tab[i][j]='a';
+
+	public void cambiarEnMatriz(int a, int b) {
+		p.tab[a][b] = p.tab[i][j];
+		p.tab[i][j] = 'a';
 		p.crearImagen(a, b);
 		p.crearImagen(i, j);
-		i=a;
-		j=b;
+		i = a;
+		j = b;
 	}
 }

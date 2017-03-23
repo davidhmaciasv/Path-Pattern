@@ -28,7 +28,8 @@ public class PathPatternLogic {
 			jugador%=4;
 		}else{
 			Alert ale=new Alert(AlertType.INFORMATION);
-			ale.setTitle("JUEGO TERMINADO");
+			ale.setTitle("PATH PATTERN");
+			ale.setHeaderText("JUEGO TERMINADO");
 			String ganado="";
 			switch (ganador) {
 			case 1:
@@ -44,18 +45,19 @@ public class PathPatternLogic {
 				ganado=cuatro.nombre;
 				break;
 			}
-			ale.setContentText("El juego lo ha ganado el jugador "+ganado);			
+			ale.setContentText("El juego lo ha ganado el jugador "+ganado);
+			ale.show();
 		}
 	}
 
 	public int ganador() {
-		if(p.tab[0][p.tab[0].length-2]=='1')
+		if(p.tab[0][0]=='1')
 			return 1;
-		if(p.tab[0][p.tab[0].length-1]=='2')
+		if(p.tab[0][1]=='2')
 			return 2;
-		if(p.tab[1][p.tab[1].length-2]=='3')
+		if(p.tab[1][0]=='3')
 			return 3;
-		if(p.tab[1][p.tab[1].length-1]=='4')
+		if(p.tab[1][1]=='4')
 			return 4;
 		return -1;
 	}

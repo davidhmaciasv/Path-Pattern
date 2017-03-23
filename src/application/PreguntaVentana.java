@@ -14,7 +14,6 @@ import javafx.scene.text.Text;
 import javafx.stage.Stage;
 
 public class PreguntaVentana 
-//extends Application
 {
 	Pregunta q;
 	Jugador j;
@@ -22,20 +21,7 @@ public class PreguntaVentana
 		this.q = q;
 		this.j = j;
 	}
-//	public static void main(String[] args) {
-//		launch(args);
-//	}
-//	@Override
-//	public void start(Stage primaryStage) throws Exception {
-//		Pane pane=new Pane();
-//		Scene scene=new Scene(pane,400,400);
-//		q=new Pregunta(4, "algo", "uno", "dos", "tres", "cuatro", 2);		
-//		primaryStage.setTitle("Path Pattern");
-//		primaryStage.setResizable(false);
-//		primaryStage.setScene(scene);
-//		primaryStage.show();
-//		mostrarVentana(primaryStage);
-//	}
+
 	public void mostrarVentana(Stage primaryStage){
 		Pane pane=new Pane();
 		Scene ant=primaryStage.getScene();
@@ -59,13 +45,15 @@ public class PreguntaVentana
 			public void handle(MouseEvent event) {				
 				if(list.getSelectionModel().getSelectedIndex()+1==q.correcta){
 					Alert a=new Alert(AlertType.INFORMATION);
-					a.setTitle("FELICITACIONES");
+					a.setTitle("PATH PATTERN");
 					a.setContentText("Respuesta correcta");
+					a.setHeaderText("FELICITACIONES");
 					a.show();
 					j.avanzar(q.dificultad);
 				}else{
 					Alert a=new Alert(AlertType.INFORMATION);
-					a.setTitle("ERROR");
+					a.setTitle("PATH PATTERN");
+					a.setHeaderText("ERROR");
 					a.setContentText("Respuesta incorrecta");
 					a.show();
 				}

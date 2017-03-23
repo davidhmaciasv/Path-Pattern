@@ -11,7 +11,6 @@ public class Handler implements EventHandler<MouseEvent> {
 	
 	@Override
 	public void handle(MouseEvent event) {
-		System.out.println("algo");
 		if(event.getClickCount()==1){
 			path.logica.jugar(path.getPrimaryStage());
 		}
