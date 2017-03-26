@@ -4,12 +4,14 @@ import java.io.BufferedReader;
 import java.io.File;
 import java.io.FileReader;
 import java.io.IOException;
+import java.util.ArrayList;
 import java.util.LinkedList;
 import java.util.Queue;
+import java.util.Random;
 import java.util.StringTokenizer;
 
 public class PilaPregunta {
-	Queue<Pregunta> preguntas= new LinkedList<Pregunta>();
+	ArrayList<Pregunta> preguntas= new ArrayList<>();
 	int nPreguntas;
 	public PilaPregunta() throws IOException {
 		BufferedReader in=new BufferedReader(new FileReader(new File("src/archivoPreguntas.txt").getAbsolutePath()));
@@ -30,18 +32,15 @@ public class PilaPregunta {
 			
 			Pregunta nueva = new Pregunta(dificultad, pregunta, respuesta1, respuesta2, respuesta3, respuesta4,
 					correcta);
-			this.preguntas.offer(nueva);
+			this.preguntas.add(nueva);
 		}
 	}
 
 	public Pregunta getPregunta() {		
-		Pregunta pregunta = this.preguntas.remove();
-		this.preguntas.offer(pregunta);
+		Random r=new Random();
+		int a=r.nextInt(preguntas.size());
+		Pregunta pregunta = preguntas.get(a);
 		return pregunta;
-	}
-
-	public Queue<Pregunta> getPreguntas() {
-		return preguntas;
 	}
 
 	public int getnPreguntas() {
