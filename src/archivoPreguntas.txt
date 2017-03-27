@@ -1,0 +1,179 @@
+27
+1 3 3
+¿Cuántos son los principios de Grasp?
+15
+23
+9
+8
+2 2 4
+¿cuál de las siguientes opciones es correcta acerca de los patrones
+de diseño?
+son soluciones a problemas generales en proyectos de software.
+representan las buenas prácticas usadas por desarrolladores
+se obtienen a partir de la experiencia de muchos desarrolladores
+todas las anteriores
+2 2 2
+¿cuál de las siguientes opciones es cierta con respecto al
+"bajo acoplamiento"?
+aumenta el conocimiento que tienen los objetos entre sí evitando errores
+reduce el impacto que tienen los cambios
+aumenta el tiempo y esfuerzo al modificar software
+todas las anteriores
+1 4 1
+De las siguientes palabras ¿cuál hace referencia a la alta cohesión?
+Coherencia
+Adhesión
+Relación
+Ejecución
+2 3 3
+¿la clase java.lang.Integer ejemplifica cuál patrón de diseño
+teniendo en cuenta su relación con el primitivo int?
+Abstract Factory
+Composite
+Decorator
+Observer
+2 3 1
+¿cuál de los siguientes es un criterio válido de una clase B
+para crear una clase A según el patrón "creator" de GRASP?
+puede ser una clase que contenga a A
+puede ser una clase sin relación con A para disminuir el acoplamiento con A
+puede ser una clase que comparta la misma interfaz que A
+puede ser una clase hija de A
+1 3 2
+¿Cómo se clasifican los patrones?
+Patrones de diseño, utilidad y creación.
+Patrones de creación, estructurales y comportamiento.
+Patrones de cumplimiento, seguridad y estructurales.
+Patrones de comportamiento, estructurales y utilidad.
+2 3 1
+¿cuál de los siguientes patrones se usa cuando necesitamos
+manejar un grupo de objetos como si fuera un solo objeto?
+Composite
+Facade
+Flyweight
+Decorator
+2 4 2
+¿Los patrones Singleton, Builder y Factory Method corresponden a
+los patrones de creación?
+No
+Si
+-
+-
+2 3 3
+¿cuál de los siguientes patrones se usa principalmente para reducir
+el número de objetos creados y para mejorar el desempeño?
+Composite
+Facade
+Flyweight
+Decorator
+1 5 4
+¿Qué problema intenta solucionar el patrón Abtract Factory?
+Crear clases ligeras
+Garantizar polimorfismo
+Crear clases temporales
+Crear diferentes familias de objetos.
+2 3 3
+¿cuál de las siguientes afirmaciones es correcta acerca del patrón
+"Memento"?
+se usa para recorrer una colección de una manera secuencial
+se usa para reducir la complejidad en la comunicación entre objetos
+se usa para restaurar el estado de un objeto a un estado previo
+se usa cuando hay una relación uno-a-muchos entre objetos
+2 4 3
+¿El patrón Abtract Factory en que categoría de dificultad se
+encuentra?
+Fácil
+Intermedio
+Difícil
+Ninguna de las anteriores
+2 2 1
+¿en cuál de los siguientes patrones el comportamiento de una clase
+cambia en función de su estado?
+State
+Null Object
+Strategy
+Template
+1 3 2
+¿El bajo acoplamiento disminuye?
+Alta cohesión
+Dependencia  entre las clases
+Responsabilidades a los objetos
+Ninguna de las anteriores
+2 2 1
+¿cuál de las siguientes afirmaciones describe correctamente a los
+patrones creacionales?
+permiten crear objetos ocultando la lógica de creación sin usar el operador new
+se relacionan con la composición de clases y objetos utilizando herencia
+están relacionados con la comunicación entre objetos
+están relacionados con la capa de presentación
+1 4 3
+¿Cuáles  son las  clases de acoplamiento?
+Acoplamiento social, económico y político
+Acoplamiento psicológico, común y contenido
+Acoplamiento de control, común y contenido
+Acoplamiento de contenido, común y estratégico
+2 3 3
+¿cuál de las siguientes afirmaciones describe correctamente al
+patrón "Adapter"?
+construye un objeto complejo a partir de objetos simples
+crea duplicados de un objeto teniendo en cuenta el desempeño
+sirve para poder comunicar dos interfaces incompatibles
+se usa para disminuir el acoplamiento entre una abstracción y su implementación
+1 2 4
+¿Qué función tiene el patrón singleton?
+Restringir la creación de clases
+Garantizar muchas instancias
+Generar valores a un objeto único
+Garantizar que una clase solo tenga una instancia
+2 4 2
+¿cuál de los siguientes patrones oculta las complejidades del
+sistema y provee una interfaz para acceder al sistema?
+Composite
+Facade
+Flyweight
+Decorator
+1 4 2
+¿El patrón singleton está clasificado como?
+Patrón de comportamiento
+Patrón de creación
+Patrón estructural
+Patrón informático
+2 5 1
+¿Qué patrón sirve para construir objetos complejos a partir de
+otros más simples y similares entre sí, gracias a la composición recursiva?
+Composite
+State
+Proxy
+Facade
+1 3 3
+¿Cuál es la finalidad del patrón Prototype?
+Generar bajo acoplamiento
+Garantizar instancias únicas
+Crear nuevos objetos duplicándolos con una instancia clonada previamente
+Clonar instancias
+1 2 4
+¿Cuáles son los tipos de clonación cuando usamos Prototype?
+Superficial y local
+Profunda y clara
+Clara y local
+Superficial y profunda
+1 3 3
+¿Cuál es el principio básico de asignación de responsabilidades?
+Creador
+Fabricación pura
+Experto en información
+Polimorfismo
+2 2 1
+¿Cuándo necesitamos generar bajo acoplamiento que principio nos
+puede ayudar?
+Indireccion
+Fabricación pura
+Variaciones protegidas
+Polimorfismo
+2 3 2
+¿El principio de fabricación pura es una clase intermedia que nos
+sirve para?
+Disminuir el acoplamiento
+Aumentar la cohesión
+Brindar responsabilidades
+Responder de maneras distintas una tarea especifica
