@@ -13,7 +13,7 @@ public class PilaPregunta {
 	int nPreguntas;
 	public PilaPregunta() throws IOException {
 		InputStream inputStream = getClass().getResourceAsStream("/archivoPreguntas.txt"); 
-		BufferedReader bufferedReader = new BufferedReader(new InputStreamReader(inputStream));		
+		BufferedReader bufferedReader = new BufferedReader(new InputStreamReader(inputStream, "UTF-8"));		
 		this.nPreguntas = Integer.parseInt(bufferedReader.readLine());
 		for (int i = 0; i < nPreguntas; i++) {
 			StringTokenizer tok = new StringTokenizer(bufferedReader.readLine());
